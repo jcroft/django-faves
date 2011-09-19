@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Favorited!{% endblock %}
+
+{% block content %}
+  <h2>Success!</h2>
+  <p>You have flagged <a href="{{ fave.content_object.get_absolute_url }}">{{ fave.content_object }}</a> with the type "{{ fave.type.name }}".</p>
+{% endblock %}

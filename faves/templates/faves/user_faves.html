@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ fave_user.username }}'s {{ fave_type.name }} list{% endblock %}
+
+{% block content %}
+  <h2>{{ fave_user.username }}'s {{ fave_type.name }} list</h2>
+  <ul>
+  {% for fave in faves %}
+    <li><a href="{{ fave.content_object.get_absolute_url }}">{{ fave.content_object }}</a></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
